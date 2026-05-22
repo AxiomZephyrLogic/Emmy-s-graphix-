@@ -1,0 +1,25 @@
+/@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+* Styling for Emmy's Graphix */
+body { font-family: 'Poppins', sans-serif; margin: 0; background-color: #f4f7f6; }
+
+/* Navigation - Dark Blue Header */
+nav { display: flex; justify-content: space-between; padding: 20px 50px; background: #1A237E; color: white; }
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav a { color: white; text-decoration: none; font-weight: bold; }
+
+/* Header/Hero Section */
+header { text-align: center; padding: 50px 20px; background: white; }
+h1 { color: #2c3e50; }
+.btn-main { background: #5f9ea0; color: white; padding: 12px 30px; border: none; border-radius: 20px; cursor: pointer; }
+
+/* The Grid (Portfolio) */
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 40px 50px; }
+.item { background: #e0e0e0; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 10px; border: 2px solid #bdc3c7; }
+
+/* Services Section */
+.service-buttons { display: flex; justify-content: center; gap: 20px; padding: 40px; }
+.service-buttons button { padding: 15px 25px; border: 2px solid #2c3e50; background: transparent; cursor: pointer; border-radius: 8px; }
+
+/* Footer */
+footer { background: #2c3e50; color: white; text-align: center; padding: 40px; }
+
