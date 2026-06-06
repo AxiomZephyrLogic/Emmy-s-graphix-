@@ -5,29 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emmy's Graphix</title>
     <style>
-        /* General Page Settings */
         body { font-family: sans-serif; background-color: #e0e0e0; margin: 0; padding: 20px; text-align: center; }
-        
-        /* Header */
         header { margin-bottom: 30px; }
         h1 { margin: 0; color: #1a237e; font-size: 2.5rem; }
-        p { color: #555; font-size: 1.2rem; }
-
-        /* Grid */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto; }
         
-        /* Each Item Card */
-        .item { background: #ffffff; padding: 20px; border-radius: 15px; border: 2px solid #1a237e; }
-        .item img { width: 100%; border-radius: 8px; display: block; }
+        /* The Link makes the image clickable */
+        .item { background: #ffffff; padding: 20px; border-radius: 15px; border: 2px solid #1a237e; transition: transform 0.3s; }
+        .item:hover { transform: scale(1.05); } /* Adds a nice zoom effect on mouse hover */
+        .item img { width: 100%; border-radius: 8px; display: block; cursor: pointer; }
         .item p { font-weight: bold; margin-top: 15px; color: #333; }
 
-        /* Button */
-        .btn-container { margin-top: 40px; padding: 20px; }
-        .whatsapp-btn { 
-            background-color: #25d366; color: white; padding: 15px 30px; 
-            text-decoration: none; border-radius: 50px; font-weight: bold; 
-            display: inline-block; font-size: 1.2rem;
-        }
+        .whatsapp-btn { background-color: #25d366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; display: inline-block; margin-top: 40px; }
     </style>
 </head>
 <body>
@@ -38,24 +27,21 @@
     </header>
 
     <div class="grid">
-        <div class="item"><img src="Flyer 1.png" alt="Flyer 1"><p>FLYER 1</p></div>
-        <div class="item"><img src="Flyer 2.png" alt="Flyer 2"><p>FLYER 2</p></div>
-        <div class="item"><img src="Flyer 3.png" alt="Flyer 3"><p>FLYER 3</p></div>
-        <div class="item"><img src="Flyer 4.png" alt="Flyer 4"><p>FLYER 4</p></div>
-        <div class="item"><img src="Flyer 5.png" alt="Flyer 5"><p>FLYER 5</p></div>
-        <div class="item"><img src="Flyer 6.png" alt="Flyer 6"><p>FLYER 6</p></div>
-        <div class="item"><img src="Flyer 7.png" alt="Flyer 7"><p>FLYER 7</p></div>
-        <div class="item"><img src="Flyer 8.png" alt="Flyer 8"><p>FLYER 8</p></div>
-        <div class="item"><img src="Flyer 9.png" alt="Flyer 9"><p>FLYER 9</p></div>
-        <div class="item"><img src="Flyer 10.png" alt="Flyer 10"><p>FLYER 10</p></div>
-        <div class="item"><img src="Flyer 11.png" alt="Flyer 11"><p>FLYER 11</p></div>
-        <div class="item"><img src="Flyer 12.png" alt="Flyer 12"><p>FLYER 12</p></div>
+        <div class="item"><a href="Flyer 1.png"><img src="flyer1.png" alt="Flyer 1"></a><p>FLYER 1</p></div>
+        <div class="item"><a href="Flyer 2.png"><img src="flyer2.png" alt="Flyer 2"></a><p>FLYER 2</p></div>
+        <div class="item"><a href="Flyer 3.png"><img src="flyer3.png" alt="Flyer 3"></a><p>FLYER 3</p></div>
+        <div class="item"><a href="Flyer 4.png"><img src="flyer4.png" alt="Flyer 4"></a><p>FLYER 4</p></div>
+        <div class="item"><a href="Flyer 5.png"><img src="flyer5.png" alt="Flyer 5"></a><p>FLYER 5</p></div>
+        <div class="item"><a href="Flyer 6.png"><img src="flyer6.png" alt="Flyer 6"></a><p>FLYER 6</p></div>
+        <div class="item"><a href="Flyer 7.png"><img src="flyer7.png" alt="Flyer 7"></a><p>FLYER 7</p></div>
+        <div class="item"><a href="Flyer 8.png"><img src="flyer8.png" alt="Flyer 8"></a><p>FLYER 8</p></div>
+        <div class="item"><a href="Flyer 9.png"><img src="flyer9.png" alt="Flyer 9"></a><p>FLYER 9</p></div>
+        <div class="item"><a href="Flyer 10.png"><img src="flyer10.png" alt="Flyer 10"></a><p>FLYER 10</p></div>
+        <div class="item"><a href="Flyer 11.png"><img src="flyer11.png" alt="Flyer 11"></a><p>FLYER 11</p></div>
+        <div class="item"><a href="Flyer 12.png"><img src="flyer12.png" alt="Flyer 12"></a><p>FLYER 12</p></div>
     </div>
 
-    <div class="btn-container">
-        <a href="https://wa.me/2348165497340" class="whatsapp-btn">MESSAGE ON WHATSAPP</a>
-    </div>
+    <a href="https://wa.me/2348165497340" class="whatsapp-btn">MESSAGE ON WHATSAPP</a>
 
 </body>
-            </html>
-                                                                                
+</html>
