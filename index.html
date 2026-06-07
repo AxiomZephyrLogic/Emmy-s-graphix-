@@ -19,11 +19,44 @@
         .item img { width: 100%; border-radius: 12px; display: block; cursor: pointer; }
         .item p { font-weight: 600; margin-top: 15px; color: #ffffff; }
 
-        .btn-container { margin-top: 50px; padding-bottom: 50px; }
+        .btn-container { margin-top: 50px; padding-bottom: 30px; }
         .whatsapp-btn { 
             background-color: #ff69b4; color: white; padding: 20px 40px; 
             text-decoration: none; border-radius: 50px; font-weight: 600; 
             font-size: 1.4rem; display: inline-block; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            margin: 10px;
+            transition: 0.3s;
+        }
+        .whatsapp-btn:hover { transform: scale(1.05); }
+        
+        .clock-btn {
+            background-color: #667eea; color: white; padding: 20px 40px; 
+            text-decoration: none; border-radius: 50px; font-weight: 600; 
+            font-size: 1.4rem; display: inline-block; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            margin: 10px;
+            transition: 0.3s;
+        }
+        .clock-btn:hover { transform: scale(1.05); }
+
+        footer { 
+            margin-top: 60px; 
+            padding-top: 30px; 
+            border-top: 2px solid #ff69b4; 
+            padding-bottom: 20px;
+        }
+        
+        footer p { margin: 10px 0; font-size: 1rem; }
+        
+        footer a { 
+            color: #ff69b4; 
+            text-decoration: none; 
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        
+        footer a:hover { 
+            color: #667eea; 
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -50,8 +83,14 @@
     </div>
 
     <div class="btn-container">
+        <a href="clock.html" class="clock-btn">🕐 WORLD CLOCK</a>
         <a href="https://wa.me/2348165497340" class="whatsapp-btn">MESSAGE ON WHATSAPP</a>
     </div>
+
+    <footer>
+        <p>📧 Email: <a href="mailto:emmanuelbojowa@gmail.com">emmanuelbojowa@gmail.com</a></p>
+        <p style="font-size: 0.9rem; color: #ccc;">© 2026 Emmy's Graphix. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
