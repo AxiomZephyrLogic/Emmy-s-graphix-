@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emmy's Graphix - Professional Flyer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .flyer-container {
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 8.5 / 11;
+            background: linear-gradient(135deg, #002366 0%, #003399 50%, #002366 100%);
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Background Design Elements */
+        .flyer-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 105, 180, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .flyer-container::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 40px 50px;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-text {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #ff69b4;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            margin: 0;
+            line-height: 1;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #667eea;
+            font-weight: 600;
+            margin-top: 8px;
+            letter-spacing: 2px;
+        }
+
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, #ff69b4, #667eea);
+            margin: 20px 0;
+            border-radius: 2px;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+        }
+
+        .services {
+            margin-bottom: 30px;
+        }
+
+        .services-title {
+            font-size: 1.8rem;
+            color: #ff69b4;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .service-icon {
+            width: 30px;
+            height: 30px;
+            background: linear-gradient(135deg, #ff69b4, #667eea);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .highlight {
+            color: #ff69b4;
+            font-weight: 700;
+        }
+
+        /* Footer Section */
+        .footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 2px solid rgba(255, 105, 180, 0.3);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            font-size: 0.95rem;
+            color: white;
+        }
+
+        .contact-label {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff69b4, #e656a3);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .flyer-container {
+                aspect-ratio: 9 / 16;
+            }
+
+            .content {
+                padding: 25px 30px;
+            }
+
+            .logo-text {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1rem;
+            }
+
+            .services-title {
+                font-size: 1.4rem;
+            }
+
+            .service-item {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .flyer-container {
+                border-radius: 0;
+                box-shadow: none;
+                max-width: 100%;
+                aspect-ratio: auto;
+                height: 11in;
+                width: 8.5in;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flyer-container">
+        <div class="content">
+            <!-- Header -->
+            <div class="header">
+                <h1 class="logo-text">✨ Emmy's Graphix</h1>
+                <p class="tagline">PROFESSIONAL DESIGNS • STUNNING RESULTS</p>
+                <div class="divider"></div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <div class="services">
+                    <h2 class="services-title">What We Create</h2>
+                    
+                    <div class="service-item">
+                        <div class="service-icon">📱</div>
+                        <span><span class="highlight">Social Media Graphics</span> - Eye-catching designs for all platforms</span>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-icon">🎨</div>
+                        <span><span class="highlight">Brand Identity</span> - Logos, banners & complete branding packages</span>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-icon">📰</div>
+                        <span><span class="highlight">Flyers & Brochures</span> - Print-ready marketing materials</span>
+                    </div>
+
+                    <div class="service-item">
+                        <div class="service-icon">🎬</div>
+                        <span><span class="highlight">Digital Content</span> - Video thumbnails, animations & more</span>
+                    </div>
+                </div>
+
+                <p style="font-size: 1.1rem; color: #667eea; font-weight: 600; margin-top: 20px;">
+                    💡 Let us transform your vision into <span class="highlight">stunning visual content</span>
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label">📧</span> emmanuelbojowa@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">💬</span> WhatsApp: +234 816 549 7340
+                    </div>
+                </div>
+                <p style="font-size: 0.9rem; color: #aaa; margin: 10px 0;">
+                    🌍 Creating Beautiful Designs • Professional Quality • Fast Delivery
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
