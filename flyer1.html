@@ -24,190 +24,169 @@
 
         .flyer-container {
             width: 100%;
-            max-width: 800px;
+            max-width: 900px;
             aspect-ratio: 8.5 / 11;
             background: linear-gradient(135deg, #fff5fb 0%, #f0e6ff 50%, #e6f2ff 100%);
-            border-radius: 10px;
+            border-radius: 15px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             overflow: hidden;
             position: relative;
-            border: 3px solid #ff69b4;
+            border: 4px solid #ff69b4;
         }
 
-        /* Decorative Flowers - Top Left */
-        .flower-top-left {
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            width: 150px;
-            height: 150px;
-            opacity: 0.3;
-            z-index: 1;
-        }
-
-        .petal {
-            position: absolute;
-            width: 40px;
-            height: 60px;
-            background: radial-gradient(ellipse at center, #ff69b4 0%, #e656a3 100%);
-            border-radius: 50% 50% 50% 0;
-        }
-
-        .petal:nth-child(1) { transform: rotate(0deg) translateY(-40px); }
-        .petal:nth-child(2) { transform: rotate(72deg) translateY(-40px); }
-        .petal:nth-child(3) { transform: rotate(144deg) translateY(-40px); }
-        .petal:nth-child(4) { transform: rotate(216deg) translateY(-40px); }
-        .petal:nth-child(5) { transform: rotate(288deg) translateY(-40px); }
-
-        .flower-center {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: #667eea;
-            border-radius: 50%;
-            top: 65px;
-            left: 65px;
-        }
-
-        /* Decorative Flowers - Bottom Right */
-        .flower-bottom-right {
-            position: absolute;
-            bottom: -15px;
-            right: -15px;
-            width: 180px;
-            height: 180px;
-            opacity: 0.25;
-            z-index: 1;
-        }
-
-        .flower-bottom-right .petal {
-            width: 50px;
-            height: 80px;
-            background: radial-gradient(ellipse at center, #667eea 0%, #5a67d8 100%);
-        }
-
-        .flower-bottom-right .petal:nth-child(1) { transform: rotate(0deg) translateY(-50px); }
-        .flower-bottom-right .petal:nth-child(2) { transform: rotate(72deg) translateY(-50px); }
-        .flower-bottom-right .petal:nth-child(3) { transform: rotate(144deg) translateY(-50px); }
-        .flower-bottom-right .petal:nth-child(4) { transform: rotate(216deg) translateY(-50px); }
-        .flower-bottom-right .petal:nth-child(5) { transform: rotate(288deg) translateY(-50px); }
-
-        .flower-bottom-right .flower-center {
-            width: 25px;
-            height: 25px;
-            background: #ff69b4;
-            top: 77px;
-            left: 77px;
-        }
-
-        /* Decorative Leaves */
-        .leaf {
-            position: absolute;
-            width: 30px;
-            height: 50px;
-            background: linear-gradient(135deg, #90EE90, #32CD32);
-            border-radius: 0 50% 50% 50%;
-            opacity: 0.2;
-        }
-
-        .leaf1 { top: 15%; right: 5%; transform: rotate(-30deg); width: 40px; }
-        .leaf2 { bottom: 20%; left: 3%; transform: rotate(45deg); width: 35px; }
-        .leaf3 { top: 40%; right: -5px; transform: rotate(-60deg); width: 25px; }
-
-        /* Content */
-        .content {
-            position: relative;
-            z-index: 2;
+        /* Left Side - Designer Illustration */
+        .designer-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             flex-direction: column;
-            height: 100%;
-            padding: 35px 45px;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 30px;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Header Section */
-        .header {
+        /* Decorative background elements */
+        .designer-section::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255, 105, 180, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
+        }
+
+        .designer-section::after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -50px;
+            left: -50px;
+        }
+
+        /* Designer Avatar */
+        .designer-avatar {
+            position: relative;
+            z-index: 2;
+            margin-bottom: 30px;
+        }
+
+        .avatar-circle {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(135deg, #ff69b4, #667eea);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            border: 5px solid white;
+        }
+
+        .avatar-content {
+            font-size: 80px;
             text-align: center;
+        }
+
+        .designer-text {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+        }
+
+        .designer-text h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .designer-text p {
+            font-size: 0.95rem;
+            font-weight: 300;
+            opacity: 0.95;
+            line-height: 1.4;
+        }
+
+        /* Right Side - Content */
+        .content-section {
+            padding: 40px 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header */
+        .header {
             margin-bottom: 25px;
         }
 
         .logo-text {
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #ff69b4, #667eea, #ff69b4);
+            background: linear-gradient(135deg, #ff69b4, #667eea);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: none;
             margin: 0;
             line-height: 1;
-            letter-spacing: -1px;
         }
 
         .tagline {
-            font-size: 1.1rem;
-            background: linear-gradient(90deg, #ff69b4, #667eea);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 0.9rem;
+            color: #667eea;
             font-weight: 700;
+            letter-spacing: 1.5px;
             margin-top: 8px;
-            letter-spacing: 1px;
         }
 
         .divider {
-            height: 4px;
-            background: linear-gradient(90deg, #ff69b4, #667eea, #ff69b4);
-            margin: 18px auto;
+            height: 3px;
+            background: linear-gradient(90deg, #ff69b4, #667eea);
+            margin: 15px 0;
             border-radius: 2px;
-            width: 80%;
         }
 
-        /* Main Content */
-        .main-content {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
+        /* Services */
         .services {
             margin-bottom: 20px;
         }
 
         .services-title {
-            font-size: 1.6rem;
-            background: linear-gradient(135deg, #ff69b4, #667eea);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 1.3rem;
+            color: #ff69b4;
             font-weight: 800;
-            margin-bottom: 18px;
-            text-align: center;
+            margin-bottom: 12px;
         }
 
         .service-item {
             display: flex;
             align-items: center;
-            margin-bottom: 13px;
-            font-size: 1rem;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
             color: #333;
         }
 
         .service-icon {
-            width: 35px;
-            height: 35px;
+            width: 28px;
+            height: 28px;
             background: linear-gradient(135deg, #ff69b4, #667eea);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 15px;
-            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1rem;
             color: white;
-            font-size: 1.2rem;
-            box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
             flex-shrink: 0;
         }
 
@@ -216,160 +195,148 @@
             font-weight: 700;
         }
 
-        .tagline-sub {
-            text-align: center;
-            font-size: 1rem;
-            color: #667eea;
-            font-weight: 600;
-            margin: 15px 0;
-            font-style: italic;
-        }
-
-        /* Footer Section */
+        /* Footer */
         .footer {
-            text-align: center;
-            padding-top: 15px;
             border-top: 3px dashed #ff69b4;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 12px;
+            padding-top: 15px;
         }
 
         .contact-item {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #333;
+            margin-bottom: 8px;
             font-weight: 600;
         }
 
         .contact-label {
             color: #ff69b4;
-            font-size: 1.1rem;
+            font-weight: 800;
         }
 
-        .footer-text {
-            font-size: 0.85rem;
-            color: #666;
-            font-weight: 500;
-            background: linear-gradient(90deg, rgba(255, 105, 180, 0.1), rgba(102, 126, 234, 0.1));
-            padding: 8px;
-            border-radius: 8px;
-            margin-top: 8px;
+        .cta-text {
+            font-size: 0.8rem;
+            color: #667eea;
+            font-weight: 600;
+            margin-top: 10px;
+            font-style: italic;
         }
 
         /* Responsive */
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .flyer-container {
+                grid-template-columns: 1fr;
                 aspect-ratio: 9 / 16;
             }
 
-            .content {
-                padding: 20px 25px;
+            .designer-section {
+                padding: 30px 20px;
+                order: -1;
+            }
+
+            .avatar-circle {
+                width: 150px;
+                height: 150px;
+            }
+
+            .avatar-content {
+                font-size: 60px;
+            }
+
+            .designer-text h3 {
+                font-size: 1.4rem;
+            }
+
+            .content-section {
+                padding: 30px 25px;
             }
 
             .logo-text {
-                font-size: 2.5rem;
-            }
-
-            .tagline {
-                font-size: 0.95rem;
+                font-size: 2rem;
             }
 
             .services-title {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
             }
 
             .service-item {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
             }
+        }
 
-            .flower-top-left, .flower-bottom-right {
-                opacity: 0.15;
-            }
+        /* Animations */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        .avatar-circle {
+            animation: pulse 3s ease-in-out infinite;
         }
     </style>
 </head>
 <body>
     <div class="flyer-container">
-        <!-- Decorative Flowers -->
-        <div class="flower-top-left">
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="flower-center"></div>
+        <!-- Left: Designer Section -->
+        <div class="designer-section">
+            <div class="designer-avatar">
+                <div class="avatar-circle">
+                    <div class="avatar-content">👩‍💻</div>
+                </div>
+            </div>
+            <div class="designer-text">
+                <h3>Meet Emmy</h3>
+                <p>Professional Graphic Designer & Creative Visionary</p>
+            </div>
         </div>
 
-        <div class="flower-bottom-right">
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="petal"></div>
-            <div class="flower-center"></div>
-        </div>
-
-        <!-- Decorative Leaves -->
-        <div class="leaf leaf1"></div>
-        <div class="leaf leaf2"></div>
-        <div class="leaf leaf3"></div>
-
-        <!-- Main Content -->
-        <div class="content">
+        <!-- Right: Content Section -->
+        <div class="content-section">
             <!-- Header -->
             <div class="header">
-                <h1 class="logo-text">✨ Emmy's Graphix</h1>
-                <p class="tagline">DESIGNS THAT INSPIRE</p>
+                <h1 class="logo-text">Emmy's Graphix</h1>
+                <p class="tagline">✨ DESIGN EXCELLENCE ✨</p>
                 <div class="divider"></div>
             </div>
 
-            <!-- Main Content -->
-            <div class="main-content">
-                <div class="services">
-                    <h2 class="services-title">🎨 What We Create</h2>
-                    
-                    <div class="service-item">
-                        <div class="service-icon">📱</div>
-                        <span><span class="highlight">Social Media Graphics</span> - Eye-catching designs for all platforms</span>
-                    </div>
+            <!-- Services -->
+            <div class="services">
+                <h3 class="services-title">🎨 What We Offer</h3>
 
-                    <div class="service-item">
-                        <div class="service-icon">🎯</div>
-                        <span><span class="highlight">Brand Identity</span> - Logos, banners & complete branding</span>
-                    </div>
-
-                    <div class="service-item">
-                        <div class="service-icon">📰</div>
-                        <span><span class="highlight">Flyers & Brochures</span> - Print-ready marketing materials</span>
-                    </div>
-
-                    <div class="service-item">
-                        <div class="service-icon">🎬</div>
-                        <span><span class="highlight">Digital Content</span> - Video thumbnails & animations</span>
-                    </div>
+                <div class="service-item">
+                    <div class="service-icon">📱</div>
+                    <span><span class="highlight">Social Media</span> Graphics & Content</span>
                 </div>
 
-                <p class="tagline-sub">💡 Transform Your Vision Into Visual Masterpieces</p>
+                <div class="service-item">
+                    <div class="service-icon">🎯</div>
+                    <span><span class="highlight">Brand Identity</span> & Logo Design</span>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">📰</div>
+                    <span><span class="highlight">Flyers</span> & Marketing Materials</span>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">🎬</div>
+                    <span><span class="highlight">Digital Content</span> Creation</span>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-icon">🌟</div>
+                    <span><span class="highlight">Custom Designs</span> for Any Need</span>
+                </div>
             </div>
 
             <!-- Footer -->
             <div class="footer">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span class="contact-label">📧</span> emmanuelbojowa@gmail.com
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-label">💬</span> +234 816 549 7340
-                    </div>
+                <div class="contact-item">
+                    <span class="contact-label">📧</span> emmanuelbojowa@gmail.com
                 </div>
-                <p class="footer-text">
-                    ✨ Professional Quality • Fast Delivery • Creative Excellence
-                </p>
+                <div class="contact-item">
+                    <span class="contact-label">💬</span> WhatsApp: +234 816 549 7340
+                </div>
+                <p class="cta-text">Let's Create Something Amazing Together! 🚀</p>
             </div>
         </div>
     </div>
