@@ -19,31 +19,30 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 10px;
         }
 
         .flyer-container {
             width: 100%;
-            max-width: 900px;
-            aspect-ratio: 8.5 / 11;
+            max-width: 450px;
             background: linear-gradient(135deg, #fff5fb 0%, #f0e6ff 50%, #e6f2ff 100%);
             border-radius: 15px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            flex-direction: column;
             overflow: hidden;
             position: relative;
             border: 4px solid #ff69b4;
         }
 
-        /* Left Side - Designer Illustration */
+        /* Designer Section */
         .designer-section {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 40px 30px;
+            padding: 30px 25px;
             position: relative;
             overflow: hidden;
         }
@@ -52,35 +51,35 @@
         .designer-section::before {
             content: '';
             position: absolute;
-            width: 300px;
-            height: 300px;
+            width: 250px;
+            height: 250px;
             background: radial-gradient(circle, rgba(255, 105, 180, 0.2) 0%, transparent 70%);
             border-radius: 50%;
-            top: -100px;
-            right: -100px;
+            top: -80px;
+            right: -80px;
         }
 
         .designer-section::after {
             content: '';
             position: absolute;
-            width: 200px;
-            height: 200px;
+            width: 150px;
+            height: 150px;
             background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
             border-radius: 50%;
-            bottom: -50px;
-            left: -50px;
+            bottom: -30px;
+            left: -30px;
         }
 
         /* Designer Avatar */
         .designer-avatar {
             position: relative;
             z-index: 2;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .avatar-circle {
-            width: 200px;
-            height: 200px;
+            width: 140px;
+            height: 140px;
             background: linear-gradient(135deg, #ff69b4, #667eea);
             border-radius: 50%;
             display: flex;
@@ -91,7 +90,7 @@
         }
 
         .avatar-content {
-            font-size: 80px;
+            font-size: 60px;
             text-align: center;
         }
 
@@ -103,35 +102,34 @@
         }
 
         .designer-text h3 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 800;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .designer-text p {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 300;
             opacity: 0.95;
-            line-height: 1.4;
+            line-height: 1.3;
         }
 
-        /* Right Side - Content */
+        /* Content Section */
         .content-section {
-            padding: 40px 35px;
+            padding: 25px 20px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             position: relative;
             z-index: 2;
         }
 
         /* Header */
         .header {
-            margin-bottom: 25px;
+            margin-bottom: 18px;
         }
 
         .logo-text {
-            font-size: 2.8rem;
+            font-size: 2.2rem;
             font-weight: 800;
             background: linear-gradient(135deg, #ff69b4, #667eea);
             -webkit-background-clip: text;
@@ -142,50 +140,50 @@
         }
 
         .tagline {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: #667eea;
             font-weight: 700;
-            letter-spacing: 1.5px;
-            margin-top: 8px;
+            letter-spacing: 1px;
+            margin-top: 5px;
         }
 
         .divider {
             height: 3px;
             background: linear-gradient(90deg, #ff69b4, #667eea);
-            margin: 15px 0;
+            margin: 12px 0;
             border-radius: 2px;
         }
 
         /* Services */
         .services {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .services-title {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             color: #ff69b4;
             font-weight: 800;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .service-item {
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
-            font-size: 0.9rem;
+            margin-bottom: 8px;
+            font-size: 0.8rem;
             color: #333;
         }
 
         .service-icon {
-            width: 28px;
-            height: 28px;
+            width: 24px;
+            height: 24px;
             background: linear-gradient(135deg, #ff69b4, #667eea);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 10px;
-            font-size: 1rem;
+            margin-right: 8px;
+            font-size: 0.9rem;
             color: white;
             flex-shrink: 0;
         }
@@ -198,13 +196,14 @@
         /* Footer */
         .footer {
             border-top: 3px dashed #ff69b4;
-            padding-top: 15px;
+            padding-top: 12px;
+            margin-top: 12px;
         }
 
         .contact-item {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: #333;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-weight: 600;
         }
 
@@ -214,59 +213,18 @@
         }
 
         .cta-text {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #667eea;
             font-weight: 600;
-            margin-top: 10px;
+            margin-top: 8px;
             font-style: italic;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .flyer-container {
-                grid-template-columns: 1fr;
-                aspect-ratio: 9 / 16;
-            }
-
-            .designer-section {
-                padding: 30px 20px;
-                order: -1;
-            }
-
-            .avatar-circle {
-                width: 150px;
-                height: 150px;
-            }
-
-            .avatar-content {
-                font-size: 60px;
-            }
-
-            .designer-text h3 {
-                font-size: 1.4rem;
-            }
-
-            .content-section {
-                padding: 30px 25px;
-            }
-
-            .logo-text {
-                font-size: 2rem;
-            }
-
-            .services-title {
-                font-size: 1.1rem;
-            }
-
-            .service-item {
-                font-size: 0.8rem;
-            }
+            text-align: center;
         }
 
         /* Animations */
         @keyframes pulse {
             0%, 100% { opacity: 1; }
-            50% { opacity: 0.8; }
+            50% { opacity: 0.85; }
         }
 
         .avatar-circle {
@@ -276,7 +234,7 @@
 </head>
 <body>
     <div class="flyer-container">
-        <!-- Left: Designer Section -->
+        <!-- Designer Section -->
         <div class="designer-section">
             <div class="designer-avatar">
                 <div class="avatar-circle">
@@ -285,11 +243,11 @@
             </div>
             <div class="designer-text">
                 <h3>Meet Emmy</h3>
-                <p>Professional Graphic Designer & Creative Visionary</p>
+                <p>Professional Graphic Designer</p>
             </div>
         </div>
 
-        <!-- Right: Content Section -->
+        <!-- Content Section -->
         <div class="content-section">
             <!-- Header -->
             <div class="header">
@@ -304,17 +262,17 @@
 
                 <div class="service-item">
                     <div class="service-icon">📱</div>
-                    <span><span class="highlight">Social Media</span> Graphics & Content</span>
+                    <span><span class="highlight">Social Media</span> Graphics</span>
                 </div>
 
                 <div class="service-item">
                     <div class="service-icon">🎯</div>
-                    <span><span class="highlight">Brand Identity</span> & Logo Design</span>
+                    <span><span class="highlight">Brand Identity</span> & Logo</span>
                 </div>
 
                 <div class="service-item">
                     <div class="service-icon">📰</div>
-                    <span><span class="highlight">Flyers</span> & Marketing Materials</span>
+                    <span><span class="highlight">Flyers</span> & Marketing</span>
                 </div>
 
                 <div class="service-item">
@@ -334,9 +292,9 @@
                     <span class="contact-label">📧</span> emmanuelbojowa@gmail.com
                 </div>
                 <div class="contact-item">
-                    <span class="contact-label">💬</span> WhatsApp: +234 816 549 7340
+                    <span class="contact-label">💬</span> +234 816 549 7340
                 </div>
-                <p class="cta-text">Let's Create Something Amazing Together! 🚀</p>
+                <p class="cta-text">Let's Create Something Amazing! 🚀</p>
             </div>
         </div>
     </div>
