@@ -12,14 +12,19 @@
             box-sizing: border-box;
         }
 
-        body {
+        html, body {
             font-family: 'Poppins', sans-serif;
             background: #f0f0f0;
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 10px;
+            padding: 15px;
         }
 
         .flyer-container {
@@ -30,9 +35,10 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             display: flex;
             flex-direction: column;
-            overflow: hidden;
+            overflow-y: auto;
             position: relative;
             border: 4px solid #ff69b4;
+            min-height: auto;
         }
 
         /* Designer Section */
@@ -45,6 +51,7 @@
             padding: 30px 25px;
             position: relative;
             overflow: hidden;
+            flex-shrink: 0;
         }
 
         /* Decorative background elements */
@@ -116,11 +123,12 @@
 
         /* Content Section */
         .content-section {
-            padding: 25px 20px;
+            padding: 25px 20px 40px 20px;
             display: flex;
             flex-direction: column;
             position: relative;
             z-index: 2;
+            flex-grow: 1;
         }
 
         /* Header */
@@ -156,7 +164,7 @@
 
         /* Services */
         .services {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .services-title {
@@ -168,24 +176,26 @@
 
         .service-item {
             display: flex;
-            align-items: center;
-            margin-bottom: 8px;
+            align-items: flex-start;
+            margin-bottom: 12px;
             font-size: 0.8rem;
             color: #333;
+            line-height: 1.4;
         }
 
         .service-icon {
-            width: 24px;
-            height: 24px;
+            width: 28px;
+            height: 28px;
             background: linear-gradient(135deg, #ff69b4, #667eea);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 8px;
+            margin-right: 10px;
             font-size: 0.9rem;
             color: white;
             flex-shrink: 0;
+            margin-top: 2px;
         }
 
         .highlight {
@@ -196,8 +206,17 @@
         /* Footer */
         .footer {
             border-top: 3px dashed #ff69b4;
-            padding-top: 12px;
-            margin-top: 12px;
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        .footer-message {
+            font-size: 0.9rem;
+            color: #667eea;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 12px;
+            font-style: italic;
         }
 
         .contact-item {
@@ -251,50 +270,47 @@
         <div class="content-section">
             <!-- Header -->
             <div class="header">
-                <h1 class="logo-text">Emmy's Graphix</h1>
-                <p class="tagline">✨ DESIGN EXCELLENCE ✨</p>
+                <h1 class="logo-text">✨ Emmy's Graphix</h1>
+                <p class="tagline">DESIGNS THAT INSPIRE</p>
                 <div class="divider"></div>
             </div>
 
             <!-- Services -->
             <div class="services">
-                <h3 class="services-title">🎨 What We Offer</h3>
+                <h3 class="services-title">🎨 What We Create</h3>
 
                 <div class="service-item">
                     <div class="service-icon">📱</div>
-                    <span><span class="highlight">Social Media</span> Graphics</span>
+                    <span><span class="highlight">Social Media Graphics</span> - Eye-catching designs for all platforms</span>
                 </div>
 
                 <div class="service-item">
                     <div class="service-icon">🎯</div>
-                    <span><span class="highlight">Brand Identity</span> & Logo</span>
+                    <span><span class="highlight">Brand Identity</span> - Logos, banners & complete branding packages</span>
                 </div>
 
                 <div class="service-item">
                     <div class="service-icon">📰</div>
-                    <span><span class="highlight">Flyers</span> & Marketing</span>
+                    <span><span class="highlight">Flyers & Brochures</span> - Print-ready marketing materials</span>
                 </div>
 
                 <div class="service-item">
                     <div class="service-icon">🎬</div>
-                    <span><span class="highlight">Digital Content</span> Creation</span>
-                </div>
-
-                <div class="service-item">
-                    <div class="service-icon">🌟</div>
-                    <span><span class="highlight">Custom Designs</span> for Any Need</span>
+                    <span><span class="highlight">Digital Content</span> - Video thumbnails, animations & more</span>
                 </div>
             </div>
 
             <!-- Footer -->
             <div class="footer">
+                <p class="footer-message">💡 Transform Your Vision Into Visual Masterpieces</p>
+                
                 <div class="contact-item">
                     <span class="contact-label">📧</span> emmanuelbojowa@gmail.com
                 </div>
                 <div class="contact-item">
-                    <span class="contact-label">💬</span> +234 816 549 7340
+                    <span class="contact-label">💬</span> WhatsApp: +234 816 549 7340
                 </div>
-                <p class="cta-text">Let's Create Something Amazing! 🚀</p>
+                <p class="cta-text">✨ Professional Quality • Fast Delivery • Creative Excellence ✨</p>
             </div>
         </div>
     </div>
