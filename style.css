@@ -1,31 +1,33 @@
-body { background-color: #f4f7f6; font-family: sans-serif; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
-.item { background: white; padding: 10px; border-radius: 10px; border: 1px solid #ccc; text-align: center; }
-.item img { width: 100%; border-radius: 5px; }
-footer { text-align: center; padding: 40px; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
 
-/@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-* Styling for Emmy's Graphix */
-body { font-family: 'Poppins', sans-serif; margin: 0; background-color: #f4f7f6; }
+.hero {
+  height: 100vh;
+  background: #111;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
 
-/* Navigation - Dark Blue Header */
-nav { display: flex; justify-content: space-between; padding: 20px 50px; background: #1A237E; color: white; }
-nav ul { display: flex; list-style: none; gap: 20px; }
-nav a { color: white; text-decoration: none; font-weight: bold; }
+.hero h1 {
+  font-size: 40px;
+}
 
-/* Header/Hero Section */
-header { text-align: center; padding: 50px 20px; background: white; }
-h1 { color: #2c3e50; }
-.btn-main { background: #5f9ea0; color: white; padding: 12px 30px; border: none; border-radius: 20px; cursor: pointer; }
+.hero p {
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
 
-/* The Grid (Portfolio) */
-.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 40px 50px; }
-.item { background: #e0e0e0; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 10px; border: 2px solid #bdc3c7; }
-
-/* Services Section */
-.service-buttons { display: flex; justify-content: center; gap: 20px; padding: 40px; }
-.service-buttons button { padding: 15px 25px; border: 2px solid #2c3e50; background: transparent; cursor: pointer; border-radius: 8px; }
-
-/* Footer */
-footer { background: #2c3e50; color: white; text-align: center; padding: 40px; }
-
+.btn {
+  background: #ff0055;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+}
