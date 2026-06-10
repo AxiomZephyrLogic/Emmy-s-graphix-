@@ -159,3 +159,26 @@ body {
   background: #ff0055;
   color: white;
   }
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to right, #111, #222);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  max-width: 500px;
+  font-size: 16px;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
