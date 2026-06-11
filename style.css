@@ -47,7 +47,7 @@ section {
 
 /* ================= HERO ================= */
 .hero {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -176,6 +176,9 @@ h2 {
   align-items: center;
   gap: 10px;
 }
+.contact-buttons .btn {
+  width: 220px;
+    }
 
 /* ================= RESPONSIVE ================= */
 @media (min-width: 768px) {
