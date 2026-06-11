@@ -6,31 +6,24 @@ body {
 }
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-family: system-ui, -apple-ok, Segoe UI, Roboto, Arial;
   background: #0f0f0f;
   color: #fff;
 }
-
 .hero {
-  height: 100vh;
-  background: #111;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center-texthighlinter;
-  padding: 20px;
+  animation: fadeIn 1s ease forwards;
 }
 
-.hero h1 {
-  font-size: 40px;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
-.hero p {
-  opacity: 0.8;
-  margin-bottom: 20px;
-}
-
 .btn {
   background: #ff0055;
   color: white;
@@ -333,5 +326,13 @@ h2 {
 .btn {
   font-family: inherit;
 }
+section {
+  padding: 70px 20px;
+}
+
+.services { background: #141414; }
+.about { background: #0f0f0f; }
+.portfolio { background: #121212; }
+.contact { background: #000; }
 
 
