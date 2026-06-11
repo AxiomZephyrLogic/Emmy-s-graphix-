@@ -1,0 +1,186 @@
+/* ========== BASE SYSTEM ========== */
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #0f0f0f;
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 80px 20px;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 12px;
+  text-decoration: none;
+}
+
+/* ========== HERO ========== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle at top, #1a1a1a, #0f0f0f);
+  animation: fadeIn 1s ease;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  max-width: 500px;
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+/* ========== BUTTON SYSTEM ========== */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+  font-family: inherit;
+}
+
+.primary {
+  background: #ff0055;
+  color: white;
+}
+
+.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 0, 85, 0.3);
+}
+
+.secondary {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.secondary:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ========== SECTIONS BACKGROUND SYSTEM ========== */
+.services { background: #141414; }
+.about { background: #0f0f0f; }
+.portfolio { background: #121212; }
+.contact { background: #000; }
+
+/* ========== CARDS ========== */
+.service-card,
+.portfolio-card {
+  background: #1b1b1b;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.service-card:hover,
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  background: #222;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* ========== SERVICE GRID ========== */
+.service-container,
+.portfolio-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* ========== PORTFOLIO IMAGE ========== */
+.portfolio-card img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.portfolio-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ========== ABOUT ========== */
+.about-content {
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* ========== CONTACT ========== */
+.contact {
+  text-align: center;
+  color: white;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+/* WhatsApp special button */
+.whatsapp {
+  background: #25D366;
+  color: white;
+}
+
+/* ========== ANIMATION (ONLY HERO) ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== RESPONSIVE ========== */
+@media (min-width: 768px) {
+  .service-container,
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
