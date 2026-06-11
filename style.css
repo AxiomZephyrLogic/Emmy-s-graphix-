@@ -1,9 +1,9 @@
- /* ========== BASE SYSTEM ========== */
+/* ================= BASE ================= */
 body {
   margin: 0;
-  font-family: system-ui, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #0f0f0f;
-  color: #ffffff;
+  color: #fff;
 }
 
 html {
@@ -14,7 +14,7 @@ section {
   padding: 80px 20px;
 }
 
-/* ========== NAVBAR ========== */
+/* ================= NAVBAR ================= */
 .navbar {
   position: sticky;
   top: 0;
@@ -38,7 +38,6 @@ section {
   font-weight: 500;
 }
 
-/* mobile menu */
 .menu-toggle {
   display: none;
   font-size: 26px;
@@ -46,7 +45,7 @@ section {
   color: white;
 }
 
-/* ========== HERO ========== */
+/* ================= HERO ================= */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -58,18 +57,19 @@ section {
 }
 
 .hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+  font-size: 52px;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
 }
 
 .tagline {
   max-width: 500px;
   opacity: 0.85;
-  margin-bottom: 20px;
+  margin: 10px 0 20px;
   color: #ccc;
 }
 
-/* ========== BUTTONS ========== */
+/* ================= BUTTONS ================= */
 .btn {
   display: inline-block;
   padding: 12px 22px;
@@ -110,19 +110,20 @@ section {
   color: white;
 }
 
-/* ========== SECTIONS BACKGROUND ========== */
+/* ================= SECTIONS ================= */
 .services { background: #141414; }
 .about { background: #0f0f0f; }
 .portfolio { background: #121212; }
 .contact { background: #000; }
 
-/* ========== HEADINGS ========== */
+/* ================= HEADINGS ================= */
 h2 {
   font-size: 28px;
   margin-bottom: 25px;
+  font-family: 'Playfair Display', serif;
 }
 
-/* ========== SERVICES + PORTFOLIO GRID ========== */
+/* ================= GRIDS ================= */
 .service-container,
 .portfolio-container {
   display: grid;
@@ -130,7 +131,7 @@ h2 {
   gap: 20px;
 }
 
-/* ========== CARDS ========== */
+/* ================= CARDS ================= */
 .service-card,
 .portfolio-card {
   background: #1b1b1b;
@@ -146,7 +147,6 @@ h2 {
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-/* portfolio image */
 .portfolio-card img {
   width: 100%;
   border-radius: 10px;
@@ -157,7 +157,7 @@ h2 {
   transform: scale(1.05);
 }
 
-/* ========== ABOUT ========== */
+/* ================= ABOUT ================= */
 .about-content {
   max-width: 600px;
   margin: auto;
@@ -165,7 +165,7 @@ h2 {
   color: #ccc;
 }
 
-/* ========== CONTACT ========== */
+/* ================= CONTACT ================= */
 .contact {
   text-align: center;
 }
@@ -177,7 +177,7 @@ h2 {
   gap: 10px;
 }
 
-/* ========== RESPONSIVE ========== */
+/* ================= RESPONSIVE ================= */
 @media (min-width: 768px) {
   .service-container,
   .portfolio-container {
@@ -185,11 +185,7 @@ h2 {
   }
 
   .hero h1 {
-    font-size: 52px;
-  }
-
-  .nav-links {
-    display: flex;
+    font-size: 56px;
   }
 }
 
@@ -211,4 +207,4 @@ h2 {
   .nav-links.active {
     display: flex;
   }
-                               }
+ }
