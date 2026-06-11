@@ -1,6 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: #ffffff;
 }
 
 .hero {
@@ -10,8 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  align-items: center-texthighlinter;
   padding: 20px;
 }
 
@@ -182,3 +183,44 @@ body {
   opacity: 0.85;
   margin-bottom: 20px;
 }
+.services, .about {
+  background: #111;
+}
+
+.portfolio {
+  background: #1a1a1a;
+}
+
+.contact {
+  background: #000;
+}
+section {
+  padding: 70px 20px;
+}
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background: radial-gradient(circle at top, #1a1a1a, #0f0f0f);
+}
+.services {
+  background: #141414;
+}
+
+.about {
+  background: #0f0f0f;
+}
+.portfolio {
+  background: #121212;
+}
+.service-card, .portfolio-card {
+  background: #1b1b1b;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
