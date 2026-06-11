@@ -1,107 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Emmy’s Graphix</title>
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css"/>
 </head>
 
+<body>
+
+<!-- NAVBAR -->
 <nav class="navbar">
   <h1>Emmy’s Graphix</h1>
 
-  <div class="nav-links">
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-links" id="navLinks">
     <a href="#services">Services</a>
     <a href="#portfolio">Portfolio</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
-  <body>
 
-  <!-- HERO -->
-  <header class="hero">
+<!-- HERO -->
+<header class="hero">
   <h1>Emmy’s Graphix</h1>
 
   <p class="tagline">
-    We design creative fashion, branding, and visuals that help your business stand out and attract attention.
+    Creative fashion, branding, and visual designs that help your business stand out.
   </p>
 
-  <div class="hero-buttons">
-    <a href="https://wa.me/234XXXXXXXXXX" class="btn primary">
-      Let’s Work Together
-    </a>
+  <div>
+    <a href="https://wa.me/234XXXXXXXXXX" class="btn primary">Let’s Work Together</a>
+    <a href="#portfolio" class="btn secondary">View Portfolio</a>
   </div>
-  </header>
+</header>
+
+<!-- SERVICES -->
 <section class="services" id="services">
-  <h2>Our Services</h2>
+  <h2>Services</h2>
 
   <div class="service-container">
 
     <div class="service-card">
       <h3>Fashion Design</h3>
-      <p>Custom and creative fashion designs tailored to your style.</p>
+      <p>Unique custom fashion concepts and styling.</p>
     </div>
 
     <div class="service-card">
-      <h3>Branding Design</h3>
-      <p>We create strong brand identities that make businesses stand out.</p>
+      <h3>Brand Identity</h3>
+      <p>Logos and branding that make businesses stand out.</p>
     </div>
 
     <div class="service-card">
       <h3>Flyers & Posters</h3>
-      <p>Eye-catching flyers for events, ads, and promotions.</p>
+      <p>Eye-catching promotional designs.</p>
     </div>
 
     <div class="service-card">
-      <h3>Social Media Graphics</h3>
-      <p>Professional designs for Instagram, WhatsApp, and business pages.</p>
+      <h3>Social Media Design</h3>
+      <p>Content designs for Instagram, WhatsApp, and ads.</p>
     </div>
 
-  
+  </div>
 </section>
-  <section class="portfolio" id="portfolio">
-  <h2>Our Work</h2>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <h2>Portfolio</h2>
 
   <div class="portfolio-container">
 
     <div class="portfolio-card">
-      <img src="img1.jpg" alt="Design 1">
-      <p>Fashion Design</p>
+      <img src="img1.jpg" alt="work"/>
+      <p>Fashion Concept</p>
     </div>
 
     <div class="portfolio-card">
-      <img src="img2.jpg" alt="Design 2">
+      <img src="img2.jpg" alt="work"/>
       <p>Brand Flyer</p>
     </div>
 
     <div class="portfolio-card">
-      <img src="img3.jpg" alt="Design 3">
-      <p>Social Media Post</p>
+      <img src="img3.jpg" alt="work"/>
+      <p>Social Design</p>
     </div>
 
     <div class="portfolio-card">
-      <img src="img4.jpg" alt="Design 4">
+      <img src="img4.jpg" alt="work"/>
       <p>Creative Branding</p>
     </div>
-  </section>
- 
-  <section class="contact" id="contact">
-  <h2>Contact Us</h2>
-
-  <p>Ready to work with Emmy? Let’s bring your ideas to life.</p>
-
-  <div class="contact-buttons">
-
-    <a href="https://wa.me/234816 949 7340" class="btn whatsapp">
-      Chat on WhatsApp
-    </a>
-
-    <a href="mailto:emmanuelbojowa@gmail.com" class="btn email">
-      Send Email
-    </a>
 
   </div>
-  </section>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <h2>About Emmy</h2>
+
+  <div class="about-content">
+    <p>
+      Emmy is a creative designer focused on fashion, branding, and visual storytelling.
+      She helps businesses and individuals bring their ideas to life through design.
+    </p>
+
+    <p>
+      Based in Nigeria and open for freelance projects.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2>Contact</h2>
+
+  <p>Let’s build something amazing together.</p>
+
+  <div class="contact-buttons">
+    <a href="https://wa.me/234XXXXXXXXXX" class="btn whatsapp">WhatsApp</a>
+    <a href="mailto:emmygraphix@email.com" class="btn email">Email</a>
+  </div>
+</section>
+
+<!-- JS -->
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
 </body>
-</html>
+    </html>
