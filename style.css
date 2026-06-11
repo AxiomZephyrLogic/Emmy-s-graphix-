@@ -110,6 +110,18 @@ section {
   background: #ff0055;
   color: white;
 }
+.instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  color: white;
+  width: 220px;
+  }
 
 /* ================= SECTIONS ================= */
 .services { background: #141414; }
@@ -224,6 +236,10 @@ h2 {
   background: #161616;
   text-align: center;
 }
+  .services { background: #141414; }
+.portfolio { background: #121212; }
+.about { background: #0f0f0f; }
+.contact { background: #000; }
 
 .brand-tagline {
   color: #ff0055;
