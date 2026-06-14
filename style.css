@@ -1,7 +1,7 @@
 /* ================= BASE ================= */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif, Montserrat;
   background: #0f0f0f;
   color: #fff;
 }
