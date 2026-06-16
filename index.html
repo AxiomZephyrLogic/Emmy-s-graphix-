@@ -164,17 +164,20 @@
   </div>
 </section>
 <section class="testimonial">
-  <h2>Client Feedback</h2>
+  <h2>Client Feedback</h2>  <div class="testimonial-slider"><button onclick="prevTestimonial()">&#10094;</button>
 
-  <div class="service-card">
-    <p>
-      "Working with Emmy was amazing. The designs were
-      professional, creative, and delivered on time."
-    </p>
+<div class="testimonial-card" id="testimonial-content">
+  <p>"Emmy delivered exactly what I wanted. Clean, professional and eye-catching designs."</p>
+  <strong>— Mr. Adewale, Business Owner</strong>
+</div>
 
-    <strong>— Client</strong>
+<button onclick="nextTestimonial()">&#10095;</button>
+
   </div>
 </section>
+
+
+    
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
@@ -259,6 +262,50 @@ function closeGallery() {
   document.getElementById("galleryModal").style.display = "none";
 }
 </script>
+<script>
+const testimonials = [
+{
+text: "Emmy delivered exactly what I wanted. Clean, professional and eye-catching designs.",
+name: "Mr. Adewale, Business Owner"
+},
+{
+text: "The flyer design exceeded my expectations. Fast delivery and great communication.",
+name: "Mrs. Fatimah, Event Planner"
+},
+{
+text: "Professional work from start to finish. I highly recommend Emmy Graphix.",
+name: "Mr. Johnson, Entrepreneur"
+},
+{
+text: "The branding materials gave my business a more premium look.",
+name: "Miss Esther, Fashion Brand Owner"
+}
+];
+
+let currentTestimonial = 0;
+
+function showTestimonial() {
+document.getElementById("testimonial-content").innerHTML =
+'<p>"' + testimonials[currentTestimonial].text + '"</p>' +
+'<strong>— ' + testimonials[currentTestimonial].name + '</strong>';
+}
+
+function nextTestimonial() {
+currentTestimonial++;
+if(currentTestimonial >= testimonials.length){
+currentTestimonial = 0;
+}
+showTestimonial();
+}
+
+function prevTestimonial() {
+currentTestimonial--;
+if(currentTestimonial < 0){
+currentTestimonial = testimonials.length - 1;
+}
+showTestimonial();
+}
+  </script>
 
 </body>
     </html>
