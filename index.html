@@ -124,6 +124,8 @@
   <img src="images/m1.jpg" alt="Magazine Design">
   <p>Magazine Designs</p>
     </div>
+  </div>
+    
    
 
    </section>
@@ -192,6 +194,76 @@
 <script>
 function toggleMenu() {
   document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+<div id="galleryModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeGallery()">&times;</span><div id="galleryImages"></div>
+
+  </div>
+</div><script>
+
+    </script>
+div id="galleryModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeGallery()">&times;</span><div id="galleryImages"></div>
+
+  </div>
+</div><script>
+const galleries = {
+  church: [
+    "images/c1.jpg",
+    "images/c2.jpg",
+    "images/c3.jpg",
+    "images/c4.jpg",
+    "images/c5.jpg"
+  ],
+
+  portrait: [
+    "images/p1.jpg",
+    "images/p2.jpg",
+    "images/p3.jpg",
+    "images/p4.jpg",
+    "images/p5.jpg"
+  ],
+
+  business: [
+    "images/b1.jpg",
+    "images/b2.jpg",
+    "images/b3.jpg",
+    "images/b4.jpg",
+    "images/b5.jpg"
+  ],
+
+  logo: [
+    "images/l1.jpg",
+    "images/l2.jpg",
+    "images/l3.jpg",
+    "images/l4.jpg",
+    "images/l5.jpg"
+  ],
+
+  magazine: [
+    "images/m1.jpg",
+    "images/m2.jpg",
+    "images/m3.jpg",
+    "images/m4.jpg"
+  ]
+};
+
+function openGallery(category) {
+  let html = "";
+
+  galleries[category].forEach(img => {
+    html += `<img src="${img}">`;
+  });
+
+  document.getElementById("galleryImages").innerHTML = html;
+  document.getElementById("galleryModal").style.display = "block";
+}
+
+function closeGallery() {
+  document.getElementById("galleryModal").style.display = "none";
 }
 </script>
 
